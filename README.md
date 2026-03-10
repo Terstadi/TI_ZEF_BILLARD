@@ -1,27 +1,39 @@
-# 🎱 L'Estocade — Site Club Billard
-**Site statique + Google Sheets comme CMS**
+# Ti Zef Billard — Site Club Billard
+**Site statique + Google Sheets comme CMS — Tonnerre de Brest**
 
 ---
 
-## 📁 Structure du projet
+## Infos du club
+
+- **Club** : Ti Zef Billard
+- **Ville** : Brest, Finistère (29) — Bretagne
+- **Email** : tizefbb@gmail.com
+- **Horaires** : Mardi–Vendredi 14h–23h | Samedi–Dimanche 10h–23h | Lundi fermé
+- **Pratiques** : Billard Pool 8 et 9 boules, Carom
+
+---
+
+## Structure du projet
 
 ```
-billard-club/
+TI_ZEF_BILLARD/
 ├── index.html          ← Page principale
 ├── css/
 │   └── style.css       ← Styles
 ├── js/
 │   └── app.js          ← Logique + intégration Sheets
+├── images/
+│   └── logo.png        ← Logo du club
 └── README.md           ← Ce fichier
 ```
 
 ---
 
-## 🚀 Déployer sur Netlify (5 minutes)
+## Déployer sur Netlify (5 minutes)
 
 ### Méthode 1 — Glisser-déposer (la plus simple)
 1. Allez sur **[netlify.com](https://netlify.com)** et créez un compte gratuit
-2. Depuis le dashboard, faites **glisser le dossier** `billard-club/` dans la zone de dépôt
+2. Depuis le dashboard, faites **glisser le dossier** dans la zone de dépôt
 3. Votre site est en ligne en 30 secondes ! Netlify vous donne une URL du type `random-name.netlify.app`
 4. Dans **Site settings > Domain management**, vous pouvez changer le nom ou connecter votre propre domaine
 
@@ -32,7 +44,7 @@ billard-club/
 
 ---
 
-## 📊 Configurer Google Sheets (le CMS)
+## Configurer Google Sheets (le CMS)
 
 ### Étape 1 — Créer le Google Sheet
 1. Créez un nouveau Google Sheets sur **[sheets.google.com](https://sheets.google.com)**
@@ -49,7 +61,7 @@ billard-club/
 4. L'ID est la partie en gras entre `/d/` et `/edit`
 
 ### Étape 3 — Configurer le site
-Dans `js/app.js`, ligne 20, remplacez :
+Dans `js/app.js`, remplacez :
 ```js
 SHEET_ID: "VOTRE_SHEET_ID_ICI",
 ```
@@ -58,14 +70,16 @@ par votre ID :
 SHEET_ID: "1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgVE2upms",
 ```
 
+> Tant que `SHEET_ID` vaut `"VOTRE_SHEET_ID_ICI"`, le site affiche des données de démo.
+
 ---
 
-## 📋 Format des onglets Google Sheets
+## Format des onglets Google Sheets
 
 ### Onglet `Calendrier`
 | titre | date | heure | type | description |
 |---|---|---|---|---|
-| Entraînement Carom | Mardi 15 Janvier 2026 | 19h00 – 21h30 | entrainement | Séance hebdomadaire... |
+| Entraînement Pool | Mardi 15 Janvier 2026 | 19h00 – 21h30 | entrainement | Séance hebdomadaire... |
 | Tournoi Mensuel | Samedi 25 Janvier 2026 | 14h00 – 19h00 | tournoi | Tournoi en round-robin... |
 
 **Valeurs valides pour `type`** : `entrainement` | `tournoi` | `evenement`
@@ -78,7 +92,7 @@ SHEET_ID: "1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgVE2upms",
 | https://exemple.com/photo1.jpg | Salle principale |
 | https://exemple.com/photo2.jpg | Tournoi mensuel |
 
-> 💡 Astuce : utilisez [Google Photos](https://photos.google.com) ou [Imgur](https://imgur.com) pour héberger vos photos gratuitement, puis collez l'URL directe.
+> Astuce : utilisez [Google Photos](https://photos.google.com) ou [Imgur](https://imgur.com) pour héberger vos photos gratuitement, puis collez l'URL directe.
 
 ---
 
@@ -89,12 +103,12 @@ SHEET_ID: "1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgVE2upms",
 | Étudiant | Moins de 26 ans | 80 | / an | Accès illimité\|Entraînements | FALSE |
 | Découverte | Séance d'essai | Gratuit | 1 séance | 1 séance offerte\|Sans engagement | FALSE |
 
-> ⚠️ Séparez les avantages avec le caractère `|` (pipe)
+> Séparez les avantages avec le caractère `|` (pipe)
 > Pour la colonne `vedette` : `TRUE` = met en avant la carte (bordure dorée)
 
 ---
 
-## 📬 Activer le formulaire de contact
+## Activer le formulaire de contact
 
 Le formulaire fonctionne nativement avec **Netlify Forms** :
 
@@ -111,19 +125,17 @@ Le formulaire fonctionne nativement avec **Netlify Forms** :
 
 ---
 
-## ✏️ Modifier le contenu fixe (nom, adresse, horaires...)
+## Modifier le contenu fixe
 
-Les informations fixes du club sont dans `index.html`. Recherchez et remplacez :
-- `L'Estocade` → Nom de votre club
-- `12 Rue des Joueurs, 75000 Paris` → Votre adresse
-- `01 23 45 67 89` → Votre numéro
-- `contact@lestocade.fr` → Votre email
-- `Fondé en 1987` → Votre année de fondation
-- `150+ Membres`, `37 Ans d'histoire`, `12 Tables pro` → Vos statistiques
+Les informations fixes du club sont dans `index.html`. Recherchez et remplacez si besoin :
+- `Ti Zef Billard` → Nom du club
+- `Brest, Finistère (29)` → Adresse
+- `tizefbb@gmail.com` → Email du club
+- `150+`, `12 tables` → Vos statistiques réelles
 
 ---
 
-## 🎨 Personnaliser les couleurs
+## Personnaliser les couleurs
 
 Dans `css/style.css`, modifiez les variables CSS en haut du fichier :
 ```css
