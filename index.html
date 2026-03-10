@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ti Zef Billard — Tonnerre de Brest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="#accueil" class="nav-logo">
+      <img src="images/logo.png" alt="Ti Zef Billard" class="nav-logo-img"/>
+      <span>Ti Zef Billard</span>
+    </a>
+    <button class="burger" id="burger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#accueil">Accueil</a></li>
+      <li><a href="#calendrier">Calendrier</a></li>
+      <li><a href="#galerie">Galerie</a></li>
+      <li><a href="#tarifs">Tarifs</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="accueil" class="hero">
+  <div class="hero-bg">
+    <div class="felt-texture"></div>
+    <div class="hero-balls">
+      <div class="ball b1"></div>
+      <div class="ball b2"></div>
+      <div class="ball b3"></div>
+      <div class="ball b4"></div>
+    </div>
+  </div>
+  <img src="images/logo.png" alt="Ti Zef Billard" class="hero-shield"/>
+  <div class="hero-content">
+    <img src="images/logo.png" alt="Ti Zef Billard" class="hero-logo-display"/>
+    <p class="hero-eyebrow">Club de Billard Pool — Brest, Bretagne</p>
+    <h1 class="hero-title">Ti Zef Billard</h1>
+    <p class="hero-subtitle">Tonnerre de Brest</p>
+    <p class="hero-sub">Passion, précision, convivialité.<br>Rejoignez la communauté des joueurs de billard brestoise.</p>
+    <div class="hero-cta">
+      <a href="#calendrier" class="btn btn-primary">Voir le calendrier</a>
+      <a href="#tarifs" class="btn btn-outline">Devenir membre</a>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <span>Découvrir</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- INFOS RAPIDES -->
+<section class="quick-info">
+  <div class="container">
+    <div class="info-grid">
+      <div class="info-card">
+        <div class="info-icon">🎱</div>
+        <div>
+          <strong>12 tables</strong>
+          <span>Carom & Pool</span>
+        </div>
+      </div>
+      <div class="info-card">
+        <div class="info-icon">📍</div>
+        <div>
+          <strong>Brest, Finistère</strong>
+          <span>Bretagne (29)</span>
+        </div>
+      </div>
+      <div class="info-card">
+        <div class="info-icon">🕐</div>
+        <div>
+          <strong>Mar–Dim 14h–23h</strong>
+          <span>Fermé le lundi</span>
+        </div>
+      </div>
+      <div class="info-card">
+        <div class="info-icon">✉️</div>
+        <div>
+          <strong>tizefbb@gmail.com</strong>
+          <span>Nous contacter</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRÉSENTATION -->
+<section class="about">
+  <div class="container about-inner">
+    <div class="about-text">
+      <span class="section-label">Notre club</span>
+      <h2 class="section-title">Un lieu dédié<br>à l'excellence</h2>
+      <p>Basé à Brest, Ti Zef Billard est un club passionné qui réunit joueurs débutants et confirmés dans une ambiance conviviale et compétitive. Nous pratiquons le billard pool 8 et 9 boules dans la joie et la bonne humeur.</p>
+      <p>Le club organise des entraînements hebdomadaires, des tournois internes et participe à des compétitions régionales. Rejoignez-nous et progressez à votre rythme !</p>
+      <div class="about-stats">
+        <div class="stat"><strong>150+</strong><span>Membres actifs</span></div>
+        <div class="stat"><strong>🎱</strong><span>Pool & Carom</span></div>
+        <div class="stat"><strong>12</strong><span>Tables pro</span></div>
+      </div>
+    </div>
+    <div class="about-visual">
+      <div class="table-visual">
+        <div class="pool-table">
+          <div class="table-felt">
+            <div class="pocket tl"></div><div class="pocket tc"></div><div class="pocket tr"></div>
+            <div class="pocket bl"></div><div class="pocket bc"></div><div class="pocket br"></div>
+            <div class="cue-ball"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CALENDRIER -->
+<section id="calendrier" class="calendar-section">
+  <div class="container">
+    <span class="section-label">Planning</span>
+    <h2 class="section-title">Calendrier</h2>
+    <p class="section-sub">Entraînements hebdomadaires et événements à venir</p>
+    <div class="calendar-filters">
+      <button class="filter-btn active" data-filter="all">Tous</button>
+      <button class="filter-btn" data-filter="entrainement">Entraînements</button>
+      <button class="filter-btn" data-filter="tournoi">Tournois</button>
+      <button class="filter-btn" data-filter="evenement">Événements</button>
+    </div>
+    <div id="calendar-loading" class="loading-msg">
+      <div class="spinner"></div>
+      <span>Chargement du calendrier...</span>
+    </div>
+    <div id="calendar-grid" class="calendar-grid" style="display:none"></div>
+    <div id="calendar-error" class="error-msg" style="display:none">
+      ⚠️ Impossible de charger le calendrier. <a href="#contact">Contactez-nous</a> pour les horaires.
+    </div>
+  </div>
+</section>
+
+<!-- GALERIE -->
+<section id="galerie" class="gallery-section">
+  <div class="container">
+    <span class="section-label">Photos</span>
+    <h2 class="section-title">Galerie</h2>
+    <div id="gallery-loading" class="loading-msg">
+      <div class="spinner"></div>
+      <span>Chargement...</span>
+    </div>
+    <div id="gallery-grid" class="gallery-grid" style="display:none"></div>
+  </div>
+</section>
+
+<!-- TARIFS -->
+<section id="tarifs" class="pricing-section">
+  <div class="container">
+    <span class="section-label">Adhésion</span>
+    <h2 class="section-title">Tarifs</h2>
+    <p class="section-sub">Choisissez la formule adaptée à votre pratique</p>
+    <div id="pricing-loading" class="loading-msg">
+      <div class="spinner"></div>
+      <span>Chargement des tarifs...</span>
+    </div>
+    <div id="pricing-grid" class="pricing-grid" style="display:none"></div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact-section">
+  <div class="container contact-inner">
+    <div class="contact-info">
+      <span class="section-label">Nous rejoindre</span>
+      <h2 class="section-title">Contact</h2>
+      <div class="contact-details">
+        <div class="contact-item">
+          <span class="ci-icon">📍</span>
+          <div><strong>Adresse</strong><p>Brest, Finistère (29)</p></div>
+        </div>
+        <div class="contact-item">
+          <span class="ci-icon">🕐</span>
+          <div><strong>Horaires d'ouverture</strong>
+            <p>Mardi – Vendredi : 14h – 23h<br>Samedi – Dimanche : 10h – 23h<br>Lundi : Fermé</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <span class="ci-icon">✉️</span>
+          <div><strong>Email</strong><p><a href="mailto:tizefbb@gmail.com">tizefbb@gmail.com</a></p></div>
+        </div>
+      </div>
+    </div>
+    <div class="contact-form-wrap">
+      <form id="contactForm" class="contact-form">
+        <h3>Envoyer un message</h3>
+        <div class="form-group">
+          <label for="name">Nom complet</label>
+          <input type="text" id="name" name="name" required placeholder="Jean Dupont"/>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required placeholder="jean@exemple.fr"/>
+        </div>
+        <div class="form-group">
+          <label for="sujet">Sujet</label>
+          <select id="sujet" name="sujet">
+            <option value="renseignement">Renseignement général</option>
+            <option value="inscription">Inscription / Adhésion</option>
+            <option value="tournoi">Tournoi</option>
+            <option value="autre">Autre</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required placeholder="Votre message..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary full-width">Envoyer le message</button>
+        <div id="form-success" class="form-success" style="display:none">✅ Message envoyé ! Nous vous répondrons sous 48h.</div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <img src="images/logo.png" alt="Ti Zef Billard" style="width:48px;height:48px;object-fit:contain;"/>
+      <strong>Ti Zef Billard</strong>
+      <p>Club de Billard — Brest</p>
+    </div>
+    <div class="footer-links">
+      <a href="#accueil">Accueil</a>
+      <a href="#calendrier">Calendrier</a>
+      <a href="#galerie">Galerie</a>
+      <a href="#tarifs">Tarifs</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <p class="footer-copy">© 2026 Ti Zef Billard — Tonnerre de Brest. Tous droits réservés.</p>
+  </div>
+</footer>
+
+<script src="js/app.js"></script>
+</body>
+</html>
