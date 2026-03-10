@@ -22,9 +22,8 @@
     </button>
     <ul class="nav-links" id="navLinks">
       <li><a href="#accueil">Accueil</a></li>
-      <li><a href="#calendrier">Calendrier</a></li>
-      <li><a href="#galerie">Galerie</a></li>
-      <li><a href="#tarifs">Tarifs</a></li>
+      <li><a href="#entrainements">Entraînements</a></li>
+      <li><a href="#galerie">Photos</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </div>
@@ -49,8 +48,8 @@
     <p class="hero-subtitle">Tonnerre de Brest</p>
     <p class="hero-sub">Passion, précision, convivialité.<br>Rejoignez la communauté des joueurs de billard brestoise.</p>
     <div class="hero-cta">
-      <a href="#calendrier" class="btn btn-primary">Voir le calendrier</a>
-      <a href="#tarifs" class="btn btn-outline">Devenir membre</a>
+      <a href="#entrainements" class="btn btn-primary">Voir les entraînements</a>
+      <a href="#contact" class="btn btn-outline">Nous contacter</a>
     </div>
   </div>
   <div class="hero-scroll">
@@ -66,13 +65,14 @@
       <div class="info-card">
         <div class="info-icon">🎱</div>
         <div>
-          <strong>12 tables</strong>
-          <span>Carom & Pool</span>
+          <strong>Billard Pool</strong>
+          <span>8 boules & 9 boules</span>
         </div>
       </div>
       <div class="info-card">
         <div class="info-icon">📍</div>
         <div>
+          <!-- Adresse à compléter quand disponible -->
           <strong>Brest, Finistère</strong>
           <span>Bretagne (29)</span>
         </div>
@@ -80,8 +80,9 @@
       <div class="info-card">
         <div class="info-icon">🕐</div>
         <div>
-          <strong>Mar–Dim 14h–23h</strong>
-          <span>Fermé le lundi</span>
+          <!-- Jours d'entraînement à confirmer -->
+          <strong>Entraînements</strong>
+          <span>Voir le planning</span>
         </div>
       </div>
       <div class="info-card">
@@ -95,134 +96,74 @@
   </div>
 </section>
 
-<!-- PRÉSENTATION -->
-<section class="about">
-  <div class="container about-inner">
-    <div class="about-text">
-      <span class="section-label">Notre club</span>
-      <h2 class="section-title">Un lieu dédié<br>à l'excellence</h2>
-      <p>Basé à Brest, Ti Zef Billard est un club passionné qui réunit joueurs débutants et confirmés dans une ambiance conviviale et compétitive. Nous pratiquons le billard pool 8 et 9 boules dans la joie et la bonne humeur.</p>
-      <p>Le club organise des entraînements hebdomadaires, des tournois internes et participe à des compétitions régionales. Rejoignez-nous et progressez à votre rythme !</p>
-      <div class="about-stats">
-        <div class="stat"><strong>150+</strong><span>Membres actifs</span></div>
-        <div class="stat"><strong>🎱</strong><span>Pool & Carom</span></div>
-        <div class="stat"><strong>12</strong><span>Tables pro</span></div>
-      </div>
-    </div>
-    <div class="about-visual">
-      <div class="table-visual">
-        <div class="pool-table">
-          <div class="table-felt">
-            <div class="pocket tl"></div><div class="pocket tc"></div><div class="pocket tr"></div>
-            <div class="pocket bl"></div><div class="pocket bc"></div><div class="pocket br"></div>
-            <div class="cue-ball"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CALENDRIER -->
-<section id="calendrier" class="calendar-section">
+<!-- ENTRAÎNEMENTS -->
+<!-- Modifier directement les jours/horaires dans cette section -->
+<section id="entrainements" class="training-section">
   <div class="container">
     <span class="section-label">Planning</span>
-    <h2 class="section-title">Calendrier</h2>
-    <p class="section-sub">Entraînements hebdomadaires et événements à venir</p>
-    <div class="calendar-filters">
-      <button class="filter-btn active" data-filter="all">Tous</button>
-      <button class="filter-btn" data-filter="entrainement">Entraînements</button>
-      <button class="filter-btn" data-filter="tournoi">Tournois</button>
-      <button class="filter-btn" data-filter="evenement">Événements</button>
-    </div>
-    <div id="calendar-loading" class="loading-msg">
-      <div class="spinner"></div>
-      <span>Chargement du calendrier...</span>
-    </div>
-    <div id="calendar-grid" class="calendar-grid" style="display:none"></div>
-    <div id="calendar-error" class="error-msg" style="display:none">
-      ⚠️ Impossible de charger le calendrier. <a href="#contact">Contactez-nous</a> pour les horaires.
+    <h2 class="section-title">Entraînements</h2>
+    <p class="section-sub">Nos séances hebdomadaires</p>
+    <div class="training-grid">
+
+      <!-- Exemple de carte entraînement — dupliquer/modifier selon le planning réel -->
+      <div class="training-card">
+        <div class="training-day">Mardi</div>
+        <div class="training-info">
+          <div class="training-title">Entraînement Pool</div>
+          <div class="training-time">19h00 – 21h30</div>
+          <div class="training-desc">Séance ouverte à tous les niveaux.</div>
+        </div>
+      </div>
+
+      <div class="training-card">
+        <div class="training-day">Jeudi</div>
+        <div class="training-info">
+          <div class="training-title">Entraînement Pool</div>
+          <div class="training-time">18h30 – 21h00</div>
+          <div class="training-desc">Débutants bienvenus.</div>
+        </div>
+      </div>
+
+      <!-- Ajouter d'autres créneaux ici -->
+
     </div>
   </div>
 </section>
 
-<!-- GALERIE -->
+<!-- GALERIE PHOTOS -->
+<!-- Les photos s'affichent ici. Ajouter les URLs dans app.js (tableau PHOTOS) -->
 <section id="galerie" class="gallery-section">
   <div class="container">
     <span class="section-label">Photos</span>
     <h2 class="section-title">Galerie</h2>
-    <div id="gallery-loading" class="loading-msg">
-      <div class="spinner"></div>
-      <span>Chargement...</span>
-    </div>
-    <div id="gallery-grid" class="gallery-grid" style="display:none"></div>
-  </div>
-</section>
-
-<!-- TARIFS -->
-<section id="tarifs" class="pricing-section">
-  <div class="container">
-    <span class="section-label">Adhésion</span>
-    <h2 class="section-title">Tarifs</h2>
-    <p class="section-sub">Choisissez la formule adaptée à votre pratique</p>
-    <div id="pricing-loading" class="loading-msg">
-      <div class="spinner"></div>
-      <span>Chargement des tarifs...</span>
-    </div>
-    <div id="pricing-grid" class="pricing-grid" style="display:none"></div>
+    <div id="gallery-grid" class="gallery-grid"></div>
   </div>
 </section>
 
 <!-- CONTACT -->
 <section id="contact" class="contact-section">
-  <div class="container contact-inner">
-    <div class="contact-info">
-      <span class="section-label">Nous rejoindre</span>
-      <h2 class="section-title">Contact</h2>
-      <div class="contact-details">
-        <div class="contact-item">
-          <span class="ci-icon">📍</span>
-          <div><strong>Adresse</strong><p>Brest, Finistère (29)</p></div>
-        </div>
-        <div class="contact-item">
-          <span class="ci-icon">🕐</span>
-          <div><strong>Horaires d'ouverture</strong>
-            <p>Mardi – Vendredi : 14h – 23h<br>Samedi – Dimanche : 10h – 23h<br>Lundi : Fermé</p>
-          </div>
-        </div>
-        <div class="contact-item">
-          <span class="ci-icon">✉️</span>
-          <div><strong>Email</strong><p><a href="mailto:tizefbb@gmail.com">tizefbb@gmail.com</a></p></div>
+  <div class="container">
+    <span class="section-label">Nous rejoindre</span>
+    <h2 class="section-title">Contact</h2>
+    <div class="contact-details">
+
+      <div class="contact-item">
+        <span class="ci-icon">📍</span>
+        <div>
+          <strong>Adresse</strong>
+          <!-- Adresse à renseigner dès que disponible -->
+          <p>Brest, Finistère (29)<br><em>Adresse exacte à venir</em></p>
         </div>
       </div>
-    </div>
-    <div class="contact-form-wrap">
-      <form id="contactForm" class="contact-form">
-        <h3>Envoyer un message</h3>
-        <div class="form-group">
-          <label for="name">Nom complet</label>
-          <input type="text" id="name" name="name" required placeholder="Jean Dupont"/>
+
+      <div class="contact-item">
+        <span class="ci-icon">✉️</span>
+        <div>
+          <strong>Email</strong>
+          <p><a href="mailto:tizefbb@gmail.com">tizefbb@gmail.com</a></p>
         </div>
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" required placeholder="jean@exemple.fr"/>
-        </div>
-        <div class="form-group">
-          <label for="sujet">Sujet</label>
-          <select id="sujet" name="sujet">
-            <option value="renseignement">Renseignement général</option>
-            <option value="inscription">Inscription / Adhésion</option>
-            <option value="tournoi">Tournoi</option>
-            <option value="autre">Autre</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="message">Message</label>
-          <textarea id="message" name="message" rows="5" required placeholder="Votre message..."></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary full-width">Envoyer le message</button>
-        <div id="form-success" class="form-success" style="display:none">✅ Message envoyé ! Nous vous répondrons sous 48h.</div>
-      </form>
+      </div>
+
     </div>
   </div>
 </section>
@@ -237,9 +178,8 @@
     </div>
     <div class="footer-links">
       <a href="#accueil">Accueil</a>
-      <a href="#calendrier">Calendrier</a>
-      <a href="#galerie">Galerie</a>
-      <a href="#tarifs">Tarifs</a>
+      <a href="#entrainements">Entraînements</a>
+      <a href="#galerie">Photos</a>
       <a href="#contact">Contact</a>
     </div>
     <p class="footer-copy">© 2026 Ti Zef Billard — Tonnerre de Brest. Tous droits réservés.</p>
